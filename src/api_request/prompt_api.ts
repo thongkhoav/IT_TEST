@@ -21,13 +21,16 @@ interface MessageResponse {
   };
 }
 
+// You must create .env file in the root directory of your project
+// and add the key AI_PROMPT_KEY to it
+// Example: AI_PROMPT_KEY=1234567890
 export const getLocationApi = async () => {
   const API_KEY = process.env.AI_PROMPT_KEY;
   if (!API_KEY) {
     console.error("API Key not found");
     return;
   }
-  if (API_KEY === "YOUR_APIKEY_HER") {
+  if (API_KEY === "YOUR_API_KEY") {
     console.error("Please replace the API Key with your own");
     return;
   }

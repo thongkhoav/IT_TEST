@@ -15,7 +15,7 @@
 
   - Run command to run : npm run p2_palindrome_check
 
-## PART 02
+## PART 02 - Run cmd from home directory: vothongkhoa_Modelty_Strategy_test
 
 - Anagram groups:
   - Run command to run: npm run p3_anagram_groups
@@ -36,7 +36,7 @@
       - Go to folder vothongkhoa_Modelty_Strategy_test/web
       - Double click file index.html
 
-## PART 04:
+## PART 04 - Run cmd from home directory: vothongkhoa_Modelty_Strategy_test
 
 - Call public api, i have two file:
   - Location api:
