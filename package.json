@@ -1,0 +1,30 @@
+{
+  "name": "vothongkhoa_modelty_strategy_test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "p1_custom_fizzbuzz": "npx ts-node ./src/fundamentals/p1_custom_fizzbuzz.ts",
+    "p2_palindrome_check": "npx ts-node ./src/fundamentals/p2_palindrome_check.ts",
+    "p3_anagram_groups": "npx ts-node ./src/data_structures/p3_anagram_groups.ts",
+    "p4_rotate_sparse_array": "npx ts-node ./src/data_structures/p4_rotate_sparse_array.ts",
+    "p6_location_api": "npx ts-node ./src/api_request/location_api.ts",
+    "p6_prompt_api": "npx ts-node ./src/api_request/prompt_api.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@inquirer/prompts": "^5.1.2",
+    "axios": "^1.7.2",
+    "dotenv": "^16.4.5",
+    "inquirer": "^10.0.1",
+    "inquirer-interactive-list-prompt": "^1.0.4"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.10",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.5.3"
+  }
+}
