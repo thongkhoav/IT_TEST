@@ -1,5 +1,5 @@
 {
-  "name": "vothongkhoa_modelty_strategy_test",
+  "name": "vothongkhoa_it_test",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -9,7 +9,7 @@
     "p2_palindrome_check": "npx ts-node ./src/fundamentals/p2_palindrome_check.ts",
     "p3_anagram_groups": "npx ts-node ./src/data_structures/p3_anagram_groups.ts",
     "p4_rotate_sparse_array": "npx ts-node ./src/data_structures/p4_rotate_sparse_array.ts",
-    "p6_location_api": "npx ts-node ./src/api_request/location_api.ts",
+    "p6_location_api": "npx ts-node ./src/api_request/p6_location_api.ts",
     "p6_prompt_api": "npx ts-node ./src/api_request/prompt_api.ts"
   },
   "keywords": [],

@@ -1,8 +1,16 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>My First HTML Page</title>
+    <title>User Form</title>
     <style>
+      #userInfoForm {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        max-width: 400px;
+        margin: 0 auto;
+      }
       label {
         display: block;
         margin-bottom: 5px;
@@ -20,6 +28,8 @@
         font-size: 14px;
       }
       button[type="submit"] {
+        display: block;
+        width: 100%;
         background-color: #007bff;
         color: #fff;
         padding: 10px 20px;
@@ -29,7 +39,7 @@
         font-size: 16px;
       }
       button[type="submit"]:hover {
-        background-color: #0056b3;
+        background-color: #0068d8;
       }
       #yourInfo {
         background-color: #fff;
@@ -50,26 +60,29 @@
     </style>
   </head>
   <body>
-    <h1 style="color: #333; text-align: center">Form</h1>
-    <form
-      id="userInfoForm"
-      method="post"
-      style="
-        background-color: #fff;
-        padding: 20px;
-        border-radius: 8px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        max-width: 400px;
-        margin: 0 auto;
-      "
-    >
-      <label for="username">User name:</label>
-      <input type="text" id="username" name="username" required />
+    <h1 style="color: #333; text-align: center">User information form</h1>
+    <form id="userInfoForm" method="post">
+      <label for="name">Name:</label>
+      <input
+        type="text"
+        id="name"
+        name="name"
+        required
+        placeholder="Input your name"
+      />
       <br />
-      <label for="age">User age:</label>
-      <input type="number" id="age" name="age" required min="1" />
+      <label for="age">Age:</label>
+      <input
+        type="number"
+        id="age"
+        name="age"
+        required
+        min="1"
+        max="200"
+        placeholder="Input your age"
+      />
       <br />
-      <label for="favColor">Color:</label>
+      <label for="favColor">Favorite color:</label>
       <select id="favColor" name="favColor" required>
         <option value="#fff">White</option>
         <option value="#15a813">Green</option>
@@ -78,31 +91,34 @@
       <br />
       <button type="submit">Submit</button>
     </form>
-    <hr />
+    <hr style="margin: 20px" />
     <!-- Change to display:block and show inputted user info -->
     <div id="yourInfo" style="display: none">
       <h3>Your information:</h3>
-      <p>Username: <span id="usernameOutput"></span></p>
+      <p>Name: <span id="nameOutput"></span></p>
       <p>Age: <span id="ageOutput"></span></p>
+      <p>Favorite color hexcode: <span id="favColorOutput"></span></p>
     </div>
   </body>
   <script>
     // Get element of form
     const form = document.querySelector("#userInfoForm");
-    // Get elements of username, age to show output
-    const usernameOutput = document.querySelector("#usernameOutput");
+    // Get elements of name, age to show output
+    const nameOutput = document.querySelector("#nameOutput");
     const ageOutput = document.querySelector("#ageOutput");
+    const favColorOutput = document.querySelector("#favColorOutput");
     // Listen to submit event of form
     form.addEventListener("submit", (event) => {
       event.preventDefault();
-      // Get value of input username, age, favColor
-      const username = document.querySelector("#username").value;
+      // Get value of input name, age, favColor
+      const name = document.querySelector("#name").value;
       const age = document.querySelector("#age").value;
       const favColor = document.querySelector("#favColor").value;
 
       // Show output
-      usernameOutput.textContent = username;
+      nameOutput.textContent = name;
       ageOutput.textContent = age;
+      favColorOutput.textContent = favColor;
       document.body.style.backgroundColor = favColor;
       document.querySelector("#yourInfo").style.display = "block";
     });

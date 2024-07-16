@@ -1,11 +1,13 @@
 const { number } = require("@inquirer/prompts");
 
 const fizzBuzz = async () => {
+  // Prompt user to enter number x
   const inputX = await number({
     min: 1,
     required: true,
     message: "Enter number x:",
   });
+  // Prompt user to enter number y
   const inputY = await number({
     min: 1,
     required: true,
@@ -17,8 +19,10 @@ const fizzBuzz = async () => {
     },
     message: "Enter number y:",
   });
+  // Loop through 1 to 100
   for (let index = 1; index <= 100; index++) {
     let output = index.toString();
+    // Check if the number is equal to x, y or x*y
     switch (index) {
       case inputX:
         output = "Foo";

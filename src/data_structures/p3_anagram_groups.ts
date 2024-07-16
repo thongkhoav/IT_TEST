@@ -3,7 +3,7 @@ const groupAnagramFn = (array: string[]) => {
   const map = new Map();
   for (const str of array) {
     // Sort the string to create a general word and store as a key
-    // Example: eat, tea, ate will all be sorted to aet and key will be aet
+    // Example: "eat", "tea", "ate" will all be sorted to "aet" and "aet" will be the key
     const sorted = str.split("").sort().join("");
     if (map.has(sorted)) {
       // If the key already exists, push the anagram to the value array
@@ -19,7 +19,10 @@ const groupAnagramFn = (array: string[]) => {
 
 const testGroupAnagram = () => {
   // Test cases
-  const testCases = [["eat", "tea", "tan", "ate", "nat", "bat"]];
+  const testCases = [
+    ["eat", "tea", "tan", "ate", "nat", "bat"],
+    ["team", "meat", "we", "are", "ear", "era"],
+  ];
   console.log("Group anagrams:");
 
   testCases.forEach((testCase) => {
